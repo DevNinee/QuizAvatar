@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Qual Nação de Avatar Você Seria?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA INICIAL -->
+  <div id="inicio" class="tela ativa">
+    <h1>Descubra sua Nação em Avatar</h1>
+    <p>Responda às perguntas e descubra se você pertence à Água, Terra, Fogo ou Ar!</p>
+    <button id="btnIniciar">Começar</button>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="tela">
+    <h2 id="pergunta">Pergunta aqui</h2>
+
+    <div class="opcoes">
+      <button class="opcao" data-valor="a">Opção A</button>
+      <button class="opcao" data-valor="b">Opção B</button>
+      <button class="opcao" data-valor="c">Opção C</button>
+    </div>
+
+    <p id="progresso">Pergunta 1 de 10</p>
+  </div>
+
+  <!-- RESULTADO -->
+  <div id="resultado" class="tela">
+    <h2>Seu resultado:</h2>
+    <h1 id="elementoFinal"></h1>
+    <p id="descricao"></p>
+    <button id="reiniciar">Refazer Quiz</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
