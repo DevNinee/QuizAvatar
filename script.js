@@ -29,91 +29,81 @@ const perguntas = [
   {
     pergunta: "Como você resolve problemas?",
     opcoes: [
-      { texto: "Com calma e estratégia", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Com força e determinação", pontos: { agua: 0, terra: 2, fogo: 3, ar: 0 } },
-      { texto: "Com criatividade", pontos: { agua: 1, terra: 0, fogo: 1, ar: 3 } },
-      { texto: "Evito conflitos", pontos: { agua: 2, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Com calma e estratégia", pontos: { agua: 3, terra: 2, fogo: 0, ar: 1 } },
+      { texto: "Com força e determinação", pontos: { agua: 0, terra: 1, fogo: 3, ar: 2 } },
+      { texto: "Com criatividade", pontos: { agua: 2, terra: 0, fogo: 1, ar: 3 } },
     ]
   },
   {
     pergunta: "Qual ambiente você prefere?",
     opcoes: [
-      { texto: "Praia ou mar", pontos: { agua: 3, terra: 0, fogo: 0, ar: 1 } },
-      { texto: "Montanhas", pontos: { agua: 0, terra: 3, fogo: 1, ar: 0 } },
-      { texto: "Lugar quente", pontos: { agua: 0, terra: 1, fogo: 3, ar: 0 } },
-      { texto: "Altos céus", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Praia ou mar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Montanhas", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
+      { texto: "Nos ceus, com o vento", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   },
   {
     pergunta: "Qual qualidade te define?",
     opcoes: [
       { texto: "Adaptável", pontos: { agua: 3, terra: 0, fogo: 1, ar: 2 } },
-      { texto: "Resistente", pontos: { agua: 0, terra: 3, fogo: 1, ar: 0 } },
-      { texto: "Intenso", pontos: { agua: 0, terra: 0, fogo: 3, ar: 1 } },
-      { texto: "Livre", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Resistente", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Intenso", pontos: { agua: 1, terra: 0, fogo: 3, ar: 2 } },
     ]
   },
   {
     pergunta: "O que você faria em um conflito?",
     opcoes: [
-      { texto: "Dialogar", pontos: { agua: 3, terra: 0, fogo: 0, ar: 2 } },
-      { texto: "Enfrentar de frente", pontos: { agua: 0, terra: 2, fogo: 3, ar: 0 } },
-      { texto: "Defender posição", pontos: { agua: 0, terra: 3, fogo: 1, ar: 0 } },
-      { texto: "Evitar", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Dialogar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Enfrentar de frente", pontos: { agua: 0, terra: 2, fogo: 3, ar: 1 } },
+      { texto: "Defender posição", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
     ]
   },
   {
     pergunta: "Qual cor você prefere?",
     opcoes: [
-      { texto: "Azul", pontos: { agua: 3, terra: 0, fogo: 0, ar: 1 } },
-      { texto: "Verde", pontos: { agua: 0, terra: 3, fogo: 0, ar: 1 } },
-      { texto: "Vermelho", pontos: { agua: 0, terra: 0, fogo: 3, ar: 0 } },
-      { texto: "Branco", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Azul", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Verde", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
+      { texto: "Branco e dourado", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   },
   {
     pergunta: "Qual seu estilo?",
     opcoes: [
       { texto: "Calmo", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Firme", pontos: { agua: 0, terra: 3, fogo: 1, ar: 0 } },
-      { texto: "Explosivo", pontos: { agua: 0, terra: 0, fogo: 3, ar: 1 } },
-      { texto: "Leve", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Firme", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Explosivo", pontos: { agua: 1, terra: 0, fogo: 3, ar: 2 } },
     ]
   },
   {
     pergunta: "O que mais te atrai?",
     opcoes: [
-      { texto: "Oceano", pontos: { agua: 3, terra: 0, fogo: 0, ar: 1 } },
-      { texto: "Floresta", pontos: { agua: 0, terra: 3, fogo: 0, ar: 1 } },
-      { texto: "Fogo", pontos: { agua: 0, terra: 0, fogo: 3, ar: 0 } },
-      { texto: "Vento", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Oceano", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Floresta", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
+      { texto: "O vento e o céu", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   },
   {
     pergunta: "Você prefere:",
     opcoes: [
-      { texto: "Planejar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 1 } },
-      { texto: "Construir", pontos: { agua: 0, terra: 3, fogo: 1, ar: 0 } },
-      { texto: "Agir rápido", pontos: { agua: 0, terra: 0, fogo: 3, ar: 1 } },
-      { texto: "Improvisar", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Planejar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Construir", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Improvisar com leveza", pontos: { agua: 2, terra: 0, fogo: 1, ar: 3 } },
     ]
   },
   {
-    pergunta: "Qual elemento combina com você?",
+    pergunta: "Que tipo de guerreiro você seria?",
     opcoes: [
-      { texto: "Água", pontos: { agua: 3, terra: 0, fogo: 0, ar: 0 } },
-      { texto: "Terra", pontos: { agua: 0, terra: 3, fogo: 0, ar: 0 } },
-      { texto: "Fogo", pontos: { agua: 0, terra: 0, fogo: 3, ar: 0 } },
-      { texto: "Ar", pontos: { agua: 0, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Um estrategista sábio", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Um guerreiro inabalável", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Um espírito livre", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   },
   {
     pergunta: "Qual frase te define?",
     opcoes: [
-      { texto: "Fluir é viver", pontos: { agua: 3, terra: 0, fogo: 0, ar: 1 } },
-      { texto: "Ser firme é essencial", pontos: { agua: 0, terra: 3, fogo: 0, ar: 0 } },
-      { texto: "A ação é tudo", pontos: { agua: 0, terra: 0, fogo: 3, ar: 0 } },
-      { texto: "Liberdade acima de tudo", pontos: { agua: 1, terra: 0, fogo: 0, ar: 3 } }
+      { texto: "Fluir é viver", pontos: { agua: 3, terra: 0, fogo: 1, ar: 2 } },
+      { texto: "Ser firme é essencial", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Liberdade acima de tudo", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   }
 ];
@@ -167,13 +157,13 @@ function mostrarResultado() {
 
   descricaoEl.innerText = descricoes[resultado];
   const imagens = {
-  agua: "agua.png",
-  terra: "terra.png",
-  fogo: "fogo.png",
-  ar: "ar.png"
-};
+    agua: "agua.png",
+    terra: "terra.png",
+    fogo: "fogo.png",
+    ar: "ar.png"
+  };
 
-imgResultado.src = imagens[resultado];
+  imgResultado.src = imagens[resultado];
 }
 
 
