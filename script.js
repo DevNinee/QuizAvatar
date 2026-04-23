@@ -1,6 +1,4 @@
-// ==========================
-// CONTROLE DE TELAS
-// ==========================
+
 const telaInicio = document.getElementById("inicio");
 const telaQuiz = document.getElementById("quiz");
 const telaResultado = document.getElementById("resultado");
@@ -8,18 +6,15 @@ const telaResultado = document.getElementById("resultado");
 const btnIniciar = document.getElementById("btnIniciar");
 const btnReiniciar = document.getElementById("reiniciar");
 
-// ELEMENTOS DO QUIZ
 const perguntaEl = document.getElementById("pergunta");
 const opcoesEl = document.querySelectorAll(".opcao");
 const progressoEl = document.getElementById("progresso");
 
-// RESULTADO
+
 const elementoFinalEl = document.getElementById("elementoFinal");
 const descricaoEl = document.getElementById("descricao");
+const imgResultado = document.getElementById("imgResultado");
 
-// ==========================
-// SISTEMA DE PONTUAÇÃO
-// ==========================
 let pontuacao = {
   agua: 0,
   terra: 0,
@@ -29,9 +24,7 @@ let pontuacao = {
 
 let perguntaAtual = 0;
 
-// ==========================
-// PERGUNTAS (10)
-// ==========================
+
 const perguntas = [
   {
     pergunta: "Como você resolve problemas?",
@@ -125,9 +118,6 @@ const perguntas = [
   }
 ];
 
-// ==========================
-// FUNÇÕES
-// ==========================
 function carregarPergunta() {
   let p = perguntas[perguntaAtual];
 
@@ -176,11 +166,17 @@ function mostrarResultado() {
   };
 
   descricaoEl.innerText = descricoes[resultado];
+  const imagens = {
+  agua: "agua.png",
+  terra: "terra.png",
+  fogo: "fogo.png",
+  ar: "ar.png"
+};
+
+imgResultado.src = imagens[resultado];
 }
 
-// ==========================
-// EVENTOS
-// ==========================
+
 btnIniciar.addEventListener("click", () => {
   telaInicio.classList.remove("ativa");
   telaQuiz.classList.add("ativa");
