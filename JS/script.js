@@ -157,10 +157,10 @@ function mostrarResultado() {
 
   descricaoEl.innerText = descricoes[resultado];
   const imagens = {
-    agua: "agua.png",
-    terra: "terra.png",
-    fogo: "fogo.png",
-    ar: "ar.png"
+    agua: "../CSS/assets/agua.png",
+    terra: "../CSS/assets/terra.png",
+    fogo: "../CSS/assets/fogo.png",
+    ar: "../CSS/assets/ar.png"
   };
 
   imgResultado.src = imagens[resultado];
