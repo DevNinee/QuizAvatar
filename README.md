@@ -1,34 +1,35 @@
-# 🌊🔥🌍💨 Descubra seu Elemento — Quiz Avatar
+# Descubra seu Elemento — Quiz Avatar
 
-> Projeto Web desenvolvido para a disciplina de Arquitetura de Software.
+> Projeto Web desenvolvido para a disciplina de Programação para Web.
 > Inspirado no universo de *Avatar: A Lenda de Aang*.
 
 ---
 
-## 📖 Descrição
+## Descrição
 
 Sistema Web interativo que permite ao usuário descobrir qual dos **quatro elementos do universo Avatar** mais combina com sua personalidade, por meio de um questionário de 10 perguntas com pontuação oculta.
 
 Desenvolvido com **HTML**, **CSS** e **JavaScript** puro.
 
+
 ---
 
-## ✅ Status do Projeto
+## Status do Projeto
 
 | Funcionalidade | Responsável | Status |
 |---|---|---|
-| Estrutura HTML (3 telas) | Front-end | ✅ Concluído |
-| Design CSS (tema Avatar, glassmorphism) | Estilização | ✅ Concluído |
-| Lógica DOM + eventos (cliques, navegação) | Erick | ✅ Concluído |
-| Sistema de pontuação (Soma Constante) | Pontuação | ✅ Concluído |
-| 10 perguntas com 3 opções cada | Pontuação | ✅ Concluído |
-| Exibição do resultado (nome, imagem, descrição) | Resultado | ✅ Concluído |
-| **Orientação a Objetos (`class Personagem`)** | Fabiana | ⏳ Pendente |
+| Estrutura HTML (3 telas) | Front-end | Concluído |
+| Design CSS (tema Avatar, glassmorphism) | Estilização | Concluído |
+| Lógica DOM + eventos (cliques, navegação) | Erick | Concluído |
+| Sistema de pontuação (Soma Constante) | Pontuação | Concluído |
+| 10 perguntas com 3 opções cada | Pontuação | Concluído |
+| Exibição do resultado (nome, imagem, descrição) | Resultado | Concluído |
+| **Orientação a Objetos (`class Personagem`)** | Fabiana | Pendente |
 | **Exibir pontuação obtida na tela de resultado** | Fabiana | ⏳ Pendente |
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 QuizAvatar/
@@ -44,7 +45,7 @@ QuizAvatar/
 
 ---
 
-## ⚙️ Requisitos de JavaScript implementados
+## Requisitos de JavaScript implementados
 
 | Requisito | Como foi implementado |
 |---|---|
@@ -55,11 +56,11 @@ QuizAvatar/
 | **Laços de repetição** | `for...in` em `somarPontos()`, `forEach` nos botões |
 | **Listas** | Array `perguntas[]` com 10 objetos |
 | **Objetos** | `pontuacao {}`, `pontos {}` por opção |
-| **Orientação a Objetos** | ⏳ `class Personagem` — pendente (Fabiana) |
+| **Orientação a Objetos** | `class Personagem` — pendente (Fabiana) |
 
 ---
 
-## 🎮 Funcionalidades
+##  Funcionalidades
 
 ### 1. Página Inicial
 - Tela de boas-vindas com descrição do universo Avatar
@@ -71,11 +72,11 @@ QuizAvatar/
 - Pontuação **oculta para o usuário**, distribuída entre os 4 elementos
 - Barra de progresso exibindo "Pergunta X de 10"
 
-#### 📊 Sistema de Pontuação — Soma Constante
+####  Sistema de Pontuação — Soma Constante
 Cada opção distribui exatamente **6 pontos** entre os 4 elementos, garantindo equilíbrio matemático:
 
-| Opção | 💧 Água | 🌍 Terra | 🔥 Fogo | 💨 Ar | Total |
-|-------|---------|----------|---------|--------|-------|
+| Opção | Água | Terra | Fogo | Ar | Total |
+|-------|------|-------|------|----|-------|
 | Opção A | 3 | 2 | 0 | 1 | **6** |
 | Opção B | 0 | 1 | 3 | 2 | **6** |
 | Opção C | 2 | 0 | 1 | 3 | **6** |
@@ -85,23 +86,23 @@ Cada opção distribui exatamente **6 pontos** entre os 4 elementos, garantindo 
 ### 3. Resultado
 - Exibe o elemento com a **maior pontuação total**
 - Mostra: nome do elemento, descrição, imagem representativa
-- ⏳ *Pendente:* exibir a **pontuação numérica** obtida
+- *Pendente:* exibir a **pontuação numérica** obtida
 - Botão **"Refazer Quiz"** para reiniciar
 
 ---
 
-## 🌊 Os Quatro Elementos
+## Os Quatro Elementos
 
 | Elemento | Características |
 |---|---|
-| 💧 **Água** | Adaptável, calmo, estratégico |
-| 🌍 **Terra** | Forte, resistente, confiável |
-| 🔥 **Fogo** | Intenso, determinado, poderoso |
-| 💨 **Ar** | Livre, criativo, leve |
+| **Água** | Adaptável, calmo, estratégico |
+| **Terra** | Forte, resistente, confiável |
+| **Fogo** | Intenso, determinado, poderoso |
+| **Ar** | Livre, criativo, leve |
 
 ---
 
-## 👥 Divisão de Tarefas
+## Divisão de Tarefas
 
 | Parte | Responsável | Conteúdo |
 |---|---|---|
@@ -113,7 +114,7 @@ Cada opção distribui exatamente **6 pontos** entre os 4 elementos, garantindo 
 
 ---
 
-## 🚀 Como executar
+## Como executar
 
 1. Clone o repositório:
 ```bash
@@ -125,7 +126,7 @@ git clone https://github.com/DevNinee/QuizAvatar.git
 
 ---
 
-## 🌿 Branches
+## Branches
 
 | Branch | Descrição |
 |---|---|
