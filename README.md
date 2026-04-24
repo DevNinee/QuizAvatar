@@ -11,6 +11,17 @@ Sistema Web interativo que permite ao usuário descobrir qual dos **quatro eleme
 
 Desenvolvido com **HTML**, **CSS** e **JavaScript** puro.
 
+```
+QuizAvatar/
+├── index.html     
+├── style.css       
+├── script.js       
+├── agua.png        
+├── terra.png       
+├── fogo.png         
+├── ar.png           
+└── elementos.png    
+```
 
 ---
 
