@@ -12,8 +12,10 @@ const progressoEl = document.getElementById("progresso");
 
 
 const elementoFinalEl = document.getElementById("elementoFinal");
+const pontuacaoFinalEl = document.getElementById("pontuacaoFinal");
 const descricaoEl = document.getElementById("descricao");
 const imgResultado = document.getElementById("imgResultado");
+const btnVoltarInicio = document.getElementById("btnVoltarInicio");
 
 let pontuacao = {
   agua: 0,
@@ -29,81 +31,81 @@ const perguntas = [
   {
     pergunta: "Como você resolve problemas?",
     opcoes: [
-      { texto: "Com calma e estratégia", pontos: { agua: 3, terra: 2, fogo: 0, ar: 1 } },
-      { texto: "Com força e determinação", pontos: { agua: 0, terra: 1, fogo: 3, ar: 2 } },
-      { texto: "Com criatividade", pontos: { agua: 2, terra: 0, fogo: 1, ar: 3 } },
+      { texto: "Com calma e estratégia", pontos: { agua: 3, terra: 2, fogo: 1, ar: 0 } },
+      { texto: "Com força e determinação", pontos: { agua: 0, terra: 3, fogo: 3, ar: 0 } },
+      { texto: "Com criatividade", pontos: { agua: 1, terra: 1, fogo: 1, ar: 3 } },
     ]
   },
   {
-    pergunta: "Qual ambiente você prefere?",
+    pergunta: "Quando alguém te magoa profundamente, qual é o seu processo de cura?",
     opcoes: [
-      { texto: "Praia ou mar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Montanhas", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
-      { texto: "Nos ceus, com o vento", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
+      { texto: "Ergo muralhas para me proteger enquanto lido com a dor.", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Permito-me sentir tudo até que a tristeza flua para fora de mim.", pontos: { agua: 3, terra: 0, fogo: 1, ar: 2 } },
+      { texto: "Procuro perdoar rapidamente para me libertar desse peso.", pontos: { agua: 2, terra: 0, fogo: 1, ar: 3 } },
     ]
   },
   {
     pergunta: "Qual qualidade te define?",
     opcoes: [
-      { texto: "Adaptável", pontos: { agua: 3, terra: 0, fogo: 1, ar: 2 } },
+      { texto: "Adaptável", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
       { texto: "Resistente", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
       { texto: "Intenso", pontos: { agua: 1, terra: 0, fogo: 3, ar: 2 } },
     ]
   },
   {
-    pergunta: "O que você faria em um conflito?",
+    pergunta: "Qual destas falhas você tem mais dificuldade de aceitar em si mesmo?",
     opcoes: [
-      { texto: "Dialogar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Enfrentar de frente", pontos: { agua: 0, terra: 2, fogo: 3, ar: 1 } },
-      { texto: "Defender posição", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
+      { texto: "Minha tendência a fugir de compromissos e confrontos.", pontos: { agua: 2, terra: 0, fogo: 1, ar: 3 } },
+      { texto: "Meu pavio curto quando estou sob pressão.", pontos: { agua: 0, terra: 1, fogo: 3, ar: 2 } },
+      { texto: "Minha teimosia e resistência em pedir ajuda.", pontos: { agua: 2, terra: 3, fogo: 1, ar: 0 } },
     ]
   },
   {
-    pergunta: "Qual cor você prefere?",
+    pergunta: "Diante do caos absoluto, onde você encontra o seu eixo?",
     opcoes: [
-      { texto: "Azul", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Verde", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
-      { texto: "Branco e dourado", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
+      { texto: "Na conexão profunda com as pessoas que amo.", pontos: { agua: 3, terra: 1, fogo: 2, ar: 0 } },
+      { texto: "Na rotina, no foco e na manutenção da ordem possível.", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "No desapego mental, observando a situação de cima.", pontos: { agua: 0, terra: 2, fogo: 1, ar: 3 } },
     ]
   },
   {
-    pergunta: "Qual seu estilo?",
+    pergunta: "Como você lida com o medo do desconhecido?",
     opcoes: [
-      { texto: "Calmo", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Firme", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
-      { texto: "Explosivo", pontos: { agua: 1, terra: 0, fogo: 3, ar: 2 } },
+      { texto: "Avanço com tudo; a ação espanta o medo.", pontos: { agua: 0, terra: 1, fogo: 3, ar: 2 } },
+      { texto: "Aceito que não tenho controle e me deixo levar.", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
+      { texto: "Me preparo exaustivamente e crio um plano sólido.", pontos: { agua: 2, terra: 3, fogo: 1, ar: 0 } },
     ]
   },
   {
-    pergunta: "O que mais te atrai?",
+    pergunta: "Se você tivesse um guia animal no mundo Avatar, qual seria a essência dessa conexão?",
     opcoes: [
-      { texto: "Oceano", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Floresta", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
-      { texto: "O vento e o céu", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
+      { texto: "Um parceiro destemido e feroz, que impulsione minha coragem (ex: Dragão).", pontos: { agua: 0, terra: 2, fogo: 3, ar: 1 } },
+      { texto: "Um companheiro livre e veloz, que me guie pelos ventos (ex: Bisão Voador).", pontos: { agua: 1, terra: 2, fogo: 0, ar: 3 } },
+      { texto: "Um guardião leal e calmo, que seja meu porto seguro (ex: Cão-urso Polar ou Texugo).", pontos: { agua: 3, terra: 2, fogo: 1, ar: 0 } },
     ]
   },
   {
     pergunta: "Você prefere:",
     opcoes: [
-      { texto: "Planejar", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Construir", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
-      { texto: "Improvisar com leveza", pontos: { agua: 2, terra: 0, fogo: 1, ar: 3 } },
+      { texto: "Planejar", pontos: { agua: 3, terra: 1, fogo: 2, ar: 0 } },
+      { texto: "Construir", pontos: { agua: 1, terra: 3, fogo: 2, ar: 0 } },
+      { texto: "Improvisar com leveza", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   },
   {
     pergunta: "Que tipo de guerreiro você seria?",
     opcoes: [
-      { texto: "Um estrategista sábio", pontos: { agua: 3, terra: 1, fogo: 0, ar: 2 } },
-      { texto: "Um guerreiro inabalável", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
+      { texto: "Um estrategista sábio", pontos: { agua: 3, terra: 0, fogo: 2, ar: 1 } },
+      { texto: "Um guerreiro inabalável", pontos: { agua: 2, terra: 3, fogo: 0, ar: 1 } },
       { texto: "Um espírito livre", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
     ]
   },
   {
-    pergunta: "Qual frase te define?",
+    pergunta: "Quando tudo acabar, como você gostaria de ser lembrado?",
     opcoes: [
-      { texto: "Fluir é viver", pontos: { agua: 3, terra: 0, fogo: 1, ar: 2 } },
-      { texto: "Ser firme é essencial", pontos: { agua: 0, terra: 3, fogo: 2, ar: 1 } },
-      { texto: "Liberdade acima de tudo", pontos: { agua: 1, terra: 0, fogo: 2, ar: 3 } },
+      { texto: "Como alguém que curou feridas e trouxe união.", pontos: { agua: 3, terra: 2, fogo: 0, ar: 1 } },
+      { texto: "Como alguém cuja paixão e feitos mudaram a história.", pontos: { agua: 0, terra: 1, fogo: 3, ar: 2 } },
+      { texto: "Como alguém de espírito livre que inspirou paz e alegria.", pontos: { agua: 2, terra: 1, fogo: 0, ar: 3 } },
     ]
   }
 ];
@@ -147,6 +149,7 @@ function mostrarResultado() {
   let resultado = calcularResultado();
 
   elementoFinalEl.innerText = resultado.toUpperCase();
+  pontuacaoFinalEl.innerText = `Pontuação final: ${pontuacao[resultado]} pontos`;
 
   const descricoes = {
     agua: "Você é adaptável, calmo e estratégico.",
@@ -194,5 +197,13 @@ btnReiniciar.addEventListener("click", () => {
   perguntaAtual = 0;
 
   telaResultado.classList.remove("ativa");
+  telaInicio.classList.add("ativa");
+});
+
+btnVoltarInicio.addEventListener("click", () => {
+  pontuacao = { agua: 0, terra: 0, fogo: 0, ar: 0 };
+  perguntaAtual = 0;
+
+  telaQuiz.classList.remove("ativa");
   telaInicio.classList.add("ativa");
 });
