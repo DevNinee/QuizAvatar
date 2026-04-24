@@ -15,7 +15,7 @@ const elementoFinalEl = document.getElementById("elementoFinal");
 const pontuacaoFinalEl = document.getElementById("pontuacaoFinal");
 const descricaoEl = document.getElementById("descricao");
 const imgResultado = document.getElementById("imgResultado");
-const btnVoltarInicio = document.getElementById("btnVoltarInicio");
+const btnVoltar = document.getElementById("btnVoltar");
 
 let pontuacao = {
   agua: 0,
@@ -25,6 +25,7 @@ let pontuacao = {
 };
 
 let perguntaAtual = 0;
+let historicoPontos = [];
 
 
 const perguntas = [
@@ -180,6 +181,7 @@ opcoesEl.forEach((botao, index) => {
   botao.addEventListener("click", () => {
     let pontos = perguntas[perguntaAtual].opcoes[index].pontos;
 
+    historicoPontos.push(pontos);
     somarPontos(pontos);
 
     perguntaAtual++;
@@ -195,15 +197,24 @@ opcoesEl.forEach((botao, index) => {
 btnReiniciar.addEventListener("click", () => {
   pontuacao = { agua: 0, terra: 0, fogo: 0, ar: 0 };
   perguntaAtual = 0;
+  historicoPontos = [];
 
   telaResultado.classList.remove("ativa");
   telaInicio.classList.add("ativa");
 });
 
-btnVoltarInicio.addEventListener("click", () => {
-  pontuacao = { agua: 0, terra: 0, fogo: 0, ar: 0 };
-  perguntaAtual = 0;
-
-  telaQuiz.classList.remove("ativa");
-  telaInicio.classList.add("ativa");
+btnVoltar.addEventListener("click", () => {
+  if (perguntaAtual > 0) {
+    perguntaAtual--;
+    let pontosRemover = historicoPontos.pop();
+    for (let elemento in pontosRemover) {
+      pontuacao[elemento] -= pontosRemover[elemento];
+    }
+    carregarPergunta();
+  } else {
+    pontuacao = { agua: 0, terra: 0, fogo: 0, ar: 0 };
+    historicoPontos = [];
+    telaQuiz.classList.remove("ativa");
+    telaInicio.classList.add("ativa");
+  }
 });

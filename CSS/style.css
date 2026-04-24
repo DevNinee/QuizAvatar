@@ -92,7 +92,8 @@ section.ativa {
 }
 
 #btnIniciar,
-#reiniciar {
+#reiniciar,
+#btnVoltar {
   border: none;
   padding: 14px 28px;
   border-radius: 14px;
@@ -106,9 +107,14 @@ section.ativa {
 }
 
 #btnIniciar:hover,
-#reiniciar:hover {
+#reiniciar:hover,
+#btnVoltar:hover {
   transform: translateY(-2px) scale(1.02);
   filter: brightness(1.08);
+}
+
+#btnVoltar {
+  margin-top: 28px;
 }
 
 #progresso {
