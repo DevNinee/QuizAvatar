@@ -1,145 +1,71 @@
 # Descubra seu Elemento — Quiz Avatar
 
-> Projeto Web desenvolvido para a disciplina de Programação para Web.
-> Inspirado no universo de *Avatar: A Lenda de Aang*.
+> Projeto Web acadêmico que consiste em um Sistema Web interativo para o usuário descobrir qual personagem/elemento ele seria em um universo fictício (Avatar: A Lenda de Aang), atendendo a todos os requisitos propostos.
 
 ---
 
-## Descrição
+## Sobre o Projeto
 
-Sistema Web interativo que permite ao usuário descobrir qual dos **quatro elementos do universo Avatar** mais combina com sua personalidade, por meio de um questionário de 10 perguntas com pontuação oculta.
-
-Desenvolvido com **HTML**, **CSS** e **JavaScript** puro.
-
-```
-QuizAvatar/
-├── index.html     
-├── style.css       
-├── script.js       
-├── agua.png        
-├── terra.png       
-├── fogo.png         
-├── ar.png           
-└── elementos.png    
-```
+Vamos supor que nossa equipe foi contrata por uma empresa de Jogos para desenvolver um Sistema Web em **HTML, CSS e JavaScript** com o objetivo de mapear a personalidade do usuário e vinculá-la a um de quatro possíveis resultados no universo de Avatar. O sistema é simples, funcional e atende a todos os critérios estabelecidos no escopo do projeto.
 
 ---
 
-## Status do Projeto
+## Requisitos Técnicos de JavaScript Aplicados
 
-| Funcionalidade | Responsável | Status |
-|---|---|---|
-| Estrutura HTML (3 telas) | Front-end | Concluído |
-| Design CSS (tema Avatar, glassmorphism) | Estilização | Concluído |
-| Lógica DOM + eventos (cliques, navegação) | Erick | Concluído |
-| Sistema de pontuação (Soma Constante) | Pontuação | Concluído |
-| 10 perguntas com 3 opções cada | Pontuação | Concluído |
-| Exibição do resultado (nome, imagem, descrição) | Resultado | Concluído |
-| **Orientação a Objetos (`class Personagem`)** | Fabiana | Concluído |
-| **Exibir pontuação obtida na tela de resultado** | Fabiana | Concluído |
+O sistema faz uso de todas as obrigatoriedades técnicas exigidas:
 
----
-
-## Estrutura do Projeto
-
-```
-QuizAvatar/
-├── index.html       # Estrutura das 3 telas (início, quiz, resultado)
-├── style.css        # Design temático Avatar com animações
-├── script.js        # Lógica completa do quiz (DOM, eventos, pontuação)
-├── agua.png         # Imagem do elemento Água
-├── terra.png        # Imagem do elemento Terra
-├── fogo.png         # Imagem do elemento Fogo
-├── ar.png           # Imagem do elemento Ar
-└── elementos.png    # Imagem de fundo
-```
+| Requisito Exigido | Como foi implementado no sistema |
+| :--- | :--- |
+| **Interação com o DOM** | Utilização de `getElementById`, `querySelectorAll`, `innerText` e `.classList.add/remove` para atualização dinâmica de telas (ações, cliques e botões) sem a necessidade de recarregar a página. |
+| **Uso de Funções** | Utilização de funções clássicas (`carregarPergunta`, `somarPontos`, `mostrarResultado`) para encapsular a lógica, e ampla adoção de **Arrow Functions** (`() =>`) nos escutadores de eventos. |
+| **Estruturas Condicionais e Laços** | Estruturas `if/else` controlam o fluxo de navegação do quiz (decidindo se passa para a próxima pergunta ou exibe o resultado). Laços `forEach` iteram sobre os botões do DOM e laços `for...in` percorrem os objetos na distribuição de pontos. |
+| **Uso de Listas e Objetos** | As opções do questionário são armazenadas em uma **Lista** (`Array` chamado `perguntas` contendo objetos). Utilizamos a lista `historicoPontos` (Array) para rastrear jogadas, e o objeto `elementos` agrupando as instâncias. |
+| **Orientação a Objetos (POO)** | **Totalmente aplicado.** Foi criada a classe `Personagem` com o construtor gerenciando os atributos (`nome`, `descricao`, `imagem`, `pontos`) e o método `adicionarPontos()`. Todos os elementos do universo foram instanciados a partir dela. |
 
 ---
 
-## Requisitos de JavaScript implementados
+## Funcionalidades Implementadas
 
-| Requisito | Como foi implementado |
-|---|---|
-| **Interação com DOM** | `getElementById`, `querySelectorAll`, `innerText`, `classList` |
-| **Funções** | `carregarPergunta()`, `somarPontos()`, `calcularResultado()`, `mostrarResultado()` |
-| **Arrow functions** | Usadas em todos os `addEventListener` |
-| **Estruturas condicionais** | `if` em `calcularResultado()` para achar o vencedor |
-| **Laços de repetição** | `for...in` em `somarPontos()`, `forEach` nos botões |
-| **Listas** | Array `perguntas[]` com 10 objetos |
-| **Objetos** | `pontuacao {}`, `pontos {}` por opção |
-| **Orientação a Objetos** | `class Personagem`  |
-
----
-
-##  Funcionalidades
+O projeto foi dividido de acordo com as 3 fases solicitadas:
 
 ### 1. Página Inicial
-- Tela de boas-vindas com descrição do universo Avatar
-- Botão **"Iniciar Quiz"** que inicia o questionário
+Apresenta uma tela inicial limpa com a descrição do universo fictício de *Avatar: A Lenda de Aang*.
+- **Universo Fictício (1.1):** Adotamos o universo das Quatro Nações de Avatar.
+- **Personagens criados:** Mestre da Água, Guerreiro de Terra, Mestre do Fogo e Nômade do Ar (totalizando 4 personagens, superando a exigência mínima de 3).
 
 ### 2. Questionário
-- **10 perguntas** com tema Avatar
-- **3 opções** por pergunta (apenas uma pode ser selecionada)
-- Pontuação **oculta para o usuário**, distribuída entre os 4 elementos
-- Barra de progresso exibindo "Pergunta X de 10"
+A jornada principal do usuário, composta exatamente por **10 perguntas** temáticas.
+- **Opções (2.1):** Cada pergunta possui um conjunto exato de **3 opções** de resposta. O usuário interage com os botões e seleciona apenas uma.
+- **Pontuação Oculta (2.2):** Ao escolher uma opção, uma pontuação matemática pré-definida é distribuída de forma fracionada entre **todos** os personagens (garantindo balanceamento estatístico). *Exemplo (2.2.1.1): Uma opção pode pontuar 3 para Água, 2 para Terra, 1 para Fogo e 0 para Ar.* Essa dinâmica complexa é invisível para o usuário final.
+- **Cálculo Automático (2.3):** O sistema processa tudo nos bastidores, percorrendo as chaves do objeto de pontos da opção selecionada e chamando o método `.adicionarPontos()` correspondente na classe instanciada.
 
-####  Sistema de Pontuação — Soma Constante
-Cada opção distribui exatamente **6 pontos** entre os 4 elementos, garantindo equilíbrio matemático:
-
-| Opção | Água | Terra | Fogo | Ar | Total |
-|-------|------|-------|------|----|-------|
-| Opção A | 3 | 2 | 0 | 1 | **6** |
-| Opção B | 0 | 1 | 3 | 2 | **6** |
-| Opção C | 2 | 0 | 1 | 3 | **6** |
-
-> Método baseado em **Soma Constante** (psicometria), garantindo que todos os 4 elementos competem de forma justa.
-
-### 3. Resultado
-- Exibe o elemento com a **maior pontuação total**
-- Mostra: nome do elemento, descrição, imagem representativa
-- *Pendente:* exibir a **pontuação numérica** obtida
-- Botão **"Refazer Quiz"** para reiniciar
+### 3. Resultado Final
+Ao responder a décima pergunta, o sistema utiliza o método de Array `.reduce()` para comparar todas as instâncias e declarar a grande vencedora.
+- **Exibição (3.1):** O resultado muda a tela ativamente para apresentar o título do personagem vencedor, a quantidade final da **pontuação obtida**, a imagem representativa formatada em CSS e o texto de descrição do perfil.
+- **Recomeçar (3.2):** Botão "Refazer Quiz" implementado. Ele restaura a pontuação de todos os objetos de volta para zero, limpa o histórico de arrays e exibe a tela de boas-vindas novamente.
+- **[BÔNUS] Função Voltar:** Para enriquecer o projeto, adicionamos a opção de "Voltar" durante o quiz. O sistema utiliza a lógica de pilhas (método `.pop()` no array de histórico) para reverter perfeitamente a pontuação dada na última pergunta e retroceder a visualização.
 
 ---
 
-## Os Quatro Elementos
+## Estrutura de Arquivos
 
-| Elemento | Características |
-|---|---|
-| **Água** | Adaptável, calmo, estratégico |
-| **Terra** | Forte, resistente, confiável |
-| **Fogo** | Intenso, determinado, poderoso |
-| **Ar** | Livre, criativo, leve |
-
----
-
-## Divisão de Tarefas
-
-| Parte | Responsável | Conteúdo |
-|---|---|---|
-| 1 — Front-end (HTML) | Grupo | Estrutura das telas, ids e classes |
-| 2 — Estilização (CSS) | Grupo | Design Avatar, animações, responsividade |
-| 3 — Lógica do Quiz (DOM + Eventos) | **Erick** | addEventListener, carregarPergunta(), navegação entre telas |
-| 4 — Sistema de Pontuação | Grupo | Objeto pontuacao, somarPontos(), calcularResultado() |
-| 5 — OOP + Resultado Final | **Fabiana** | class Personagem, mostrarResultado() com pontuação |
-
----
-
-## Como executar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/DevNinee/QuizAvatar.git
+```text
+QuizAvatar/
+├── HTML/
+│   └── index.html      # Estrutura semântica do layout e das telas "ativa/inativa"
+├── CSS/
+│   ├── style.css       # Design System (Variáveis, UI/UX)
+│   └── assets/         # Imagens importadas para o resultado
+└── JS/
+    └── script.js       # Lógica central Orientada a Objetos, controle de estado e DOM
 ```
-2. Abra o arquivo `index.html` no navegador
-
-> Não requer instalação de dependências — projeto 100% HTML/CSS/JS puro.
 
 ---
 
-## Branches
+## Como Executar Localmente
 
-| Branch | Descrição |
-|---|---|
-| `main` | Versão principal do projeto |
-| `feature/logica-quiz-dom` | Lógica DOM + eventos (Erick) |
+1. Clone este repositório via terminal:
+   ```bash
+   git clone https://github.com/DevNinee/QuizAvatar.git
+   ```
+2. Navegue até o diretório `HTML` e abra o arquivo `index.html` em qualquer navegador web de sua preferência. 
