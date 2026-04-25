@@ -35,8 +35,8 @@ QuizAvatar/
 | Sistema de pontuação (Soma Constante) | Pontuação | Concluído |
 | 10 perguntas com 3 opções cada | Pontuação | Concluído |
 | Exibição do resultado (nome, imagem, descrição) | Resultado | Concluído |
-| **Orientação a Objetos (`class Personagem`)** | Fabiana | Pendente |
-| **Exibir pontuação obtida na tela de resultado** | Fabiana | ⏳ Pendente |
+| **Orientação a Objetos (`class Personagem`)** | Fabiana | Concluído |
+| **Exibir pontuação obtida na tela de resultado** | Fabiana | Concluído |
 
 ---
 
@@ -67,7 +67,7 @@ QuizAvatar/
 | **Laços de repetição** | `for...in` em `somarPontos()`, `forEach` nos botões |
 | **Listas** | Array `perguntas[]` com 10 objetos |
 | **Objetos** | `pontuacao {}`, `pontos {}` por opção |
-| **Orientação a Objetos** | `class Personagem` — pendente (Fabiana) |
+| **Orientação a Objetos** | `class Personagem`  |
 
 ---
 
