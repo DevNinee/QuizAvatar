@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
   --agua: #4aa8ff;
@@ -36,7 +34,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-
 
 }
 
@@ -154,26 +151,15 @@ section.ativa {
 .opcao:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
+  background: #d0d1d460;
 
-.opcao:nth-child(1):hover {
-  background: linear-gradient(135deg, rgba(74, 168, 255, 0.20), rgba(74, 168, 255, 0.08));
-  border-color: rgba(74, 168, 255, 0.45);
 }
-
-.opcao:nth-child(2):hover {
-  background: linear-gradient(135deg, rgba(110, 155, 58, 0.20), rgba(110, 155, 58, 0.08));
-  border-color: rgba(110, 155, 58, 0.45);
-}
-
-.opcao:nth-child(3):hover {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.20), rgba(255, 107, 53, 0.08));
-  border-color: rgba(255, 107, 53, 0.45);
-}
-
-.opcao:nth-child(4):hover {
-  background: linear-gradient(135deg, rgba(233, 238, 245, 0.18), rgba(216, 177, 91, 0.08));
-  border-color: rgba(233, 238, 245, 0.35);
+.opcao:active,
+#btnIniciar:active,
+#reiniciar:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(0.95);
 }
 
 
@@ -256,4 +242,10 @@ section.ativa {
   #resultado::before {
     height: 150px;
   }
+}
+#pontuacaoFinal {
+  font-size: 1.1rem;
+  color: var(--destaque);
+  margin-bottom: 12px;
+  font-weight: 600;
 }
