@@ -209,7 +209,7 @@ btnVoltar.addEventListener("click", () => {
     }
     carregarPergunta();
   } else {
-    Object.values(nacoes).forEach(n => n.pontos = 0);
+    Object.values(elementos).forEach(n => n.pontos = 0);
     historicoPontos = [];
     telaQuiz.classList.remove("ativa");
     telaInicio.classList.add("ativa");
