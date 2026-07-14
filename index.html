@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qual Nação de Avatar Você Seria?</title>
+  <meta name="description"
+    content="Descubra o seu perfil profissional elemental inspirado no universo Avatar. Água, Terra, Fogo ou Ar?">
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <section id="inicio" class="ativa">
+      <h1>Perfil Profissional Elemental</h1>
+      <p>Qual é o seu estilo de trabalho: Água, Terra, Fogo ou Ar?</p>
+      <p>Responda 10 perguntas focadas em carreira e descubra seu perfil Avatar!</p>
+      <button id="btnIniciar">Iniciar Quiz</button>
+    </section>
+
+    <section id="quiz">
+      <div id="barraFundo">
+        <div id="barraProg"></div>
+      </div>
+      <p id="progresso"></p>
+      <h2 id="pergunta"></h2>
+
+      <div class="opcoes-area">
+        <button class="opcao"></button>
+        <button class="opcao"></button>
+        <button class="opcao"></button>
+      </div>
+      <button id="btnVoltar">← Voltar</button>
+    </section>
+
+    <section id="resultado">
+      <img id="imgResultado" src="" alt="Elemento">
+      <h2>Sua nação é:</h2>
+      <div id="elementoFinal"></div>
+      <p id="subtituloResultado"></p>
+      <p id="pontuacaoFinal"></p>
+      <p id="descricao"></p>
+      <div class="botoes-resultado">
+        <button id="reiniciar">Refazer Quiz</button>
+        <button id="btnCompartilhar">Compartilhar</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script type="module" src="./JS/quiz.js"></script>
+</body>
+
+</html>

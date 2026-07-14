@@ -1,0 +1,13 @@
+{
+  "name": "quiz-avatar-profiler",
+  "version": "1.0.0",
+  "description": "Avatar Professional Profiler",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
